@@ -1,0 +1,14 @@
+ [
+    {"id": 1,"nombre": "Loveless", "artista": "My Bloody Valentine", "anio": 1991, "precio": "20.000", "imagen": "albumes/Loveless.jpg","stock": 10},
+    {"id": 2,"nombre": "The Raise and Fall of a Midwest Princess","artista": "Chapell Roan", "anio": 2023,"precio": "20.000", "imagen": "albumes/TheRaiseAndFall.jpg","stock": 10},
+    {"id": 3,"nombre": "Coastal Grooves", "artista": "Blood Orange", "anio": 2011, "precio": "20.000", "imagen": "albumes/CoastalGrooves.jpg","stock": 10},
+    {"id": 4,"nombre": "Remain in Light","artista": "Talking Heads", "anio": 1985,"precio": "20.000", "imagen": "albumes/RemainInLight.jpg","stock": 10},
+    {"id": 5,"nombre": "So Tonight That I Might See","artista": "Mazzy Star", "anio": 1993,"precio": "20.000", "imagen": "albumes/SoTonight.jpg","stock": 10},
+    {"id": 6,"nombre": "This is Hardcore","artista": "Pulp", "anio": 1998,"precio": "20.000", "imagen": "albumes/ThisIsHardcore.jpg","stock": 10},
+    {"id": 7,"nombre": "DAISY","artista": "rusowsky", "anio": 2025,"precio": "20.000", "imagen": "albumes/DAISY.JPG","stock": 10},
+    {"id": 8,"nombre": "Heaven or Las Vegas","artista": "Cocteau Twins", "anio": 1990,"precio": "20.000", "imagen": "albumes/HeavenOr.jpg","stock": 10},
+    {"id": 9,"nombre": "Suede","artista": "Suede", "anio": 1993,"precio": "20.000", "imagen": "albumes/Suede.jpg","stock": 10},
+    {"id": 10,"nombre": "Surfer Rosa","artista": "Pixies", "anio": 1988,"precio": "20.000", "imagen": "albumes/SurferRosa.jpg","stock": 10},
+    {"id": 11,"nombre": "When the Pawn","artista": "Fiona Apple", "anio": 1999,"precio": "20.000", "imagen": "albumes/WhenThePawn.jpg","stock": 10},
+    {"id": 12,"nombre": "Weezer [Blue Album]","artista": "Weezer", "anio": 1994,"precio": "20.000", "imagen": "albumes/Weezer.jpg","stock": 10}
+  ]

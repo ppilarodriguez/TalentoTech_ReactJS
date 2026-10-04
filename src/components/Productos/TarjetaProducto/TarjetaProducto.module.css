@@ -1,0 +1,218 @@
+.contenedorProducto {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 340px;
+}
+
+.contenedorProducto:hover {
+    cursor: pointer;
+}
+
+.contenedorImagen {
+    display: flex;
+    padding: 0.7em;
+    background-color: #000000;
+    color: #ffffff;
+    gap: 8px;
+    overflow: hidden;
+    position: relative;
+    max-height: 220px;
+}
+
+.contenedorImagen img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.contenedorProducto .contenedorImagen .artista {
+    max-width: 25px;
+    transition: max-width 0.4s ease;
+    row-gap: 5px;
+}
+
+.contenedorProducto .contenedorImagen h5{
+    font-size: 0.9em;
+    margin: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    white-space: nowrap;
+    transition: transform 0.4s ease-in-out, margin 0.4s ease-in-out;
+}
+
+.contenedorProducto .contenedorImagen p {
+    font-size: 0.8em;
+    opacity: 0;
+}
+
+.contenedorBoton {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, margin-top 0.4s ease-in-out;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.agregar {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 0.85em;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 100%;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.agregar:hover {
+    background-color: #e0e0e0;
+}
+
+.favorito{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    opacity: 0;
+}
+
+.favorito:hover{
+    background-color: #ffffff;
+    border-color: #ffffff;
+    transform: scale(1.08);
+}
+
+.favorito:hover .iconoEstrella {
+    stroke: #000000;
+}
+
+.favorito.activo {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.favorito.activo .iconoEstrella {
+    fill: #000000;
+    stroke: #000000;
+    animation: popFavorito 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.iconoEstrella{
+    width:18px;
+    height: 18px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2px;
+    transition: transform 0.2s ease, fill 0.3s ease, stroke 0.3s ease;
+}
+
+.contenedorProducto:hover .artista {
+    max-width: 220px;
+    align-items: flex-start;
+}
+
+.contenedorProducto:hover .contenedorImagen h5,
+.contenedorProducto:hover .contenedorImagen p {
+    writing-mode: horizontal-tb;
+}
+
+.contenedorProducto:hover .contenedorImagen p {
+    margin-top: 4px;
+    opacity: 0.8;
+}
+
+.contenedorProducto:hover .contenedorBoton {
+    max-height: 120px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.contenedorProducto:hover .favorito{
+    opacity: 1;
+}
+
+.contenedorInformacion {
+    padding: 0.7em;
+    text-align: center;
+}
+
+.contenedorInformacion h4 {
+    max-width: 230px;
+    transition: all 0.6s ease;
+}
+
+.contenedorProducto:hover .contenedorInformacion h4{
+    text-align:center;
+    max-width: 375px;
+}
+
+@keyframes popFavorito {
+    0% {
+        transform: scale(0.6);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.controlCantidad {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.botonCantidad {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    width: 28px;
+    height: 28px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.botonCantidad:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.numeroCantidad {
+    color: #ffffff;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 0 8px;
+    user-select: none;
+}
