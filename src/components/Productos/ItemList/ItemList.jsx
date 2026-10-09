@@ -1,4 +1,4 @@
-import { TarjetaProducto } from '../tarjetaProducto/TarjetaProducto';
+import { TarjetaProducto } from '../TarjetaProducto/TarjetaProducto';
 import styles from './ItemList.module.css'
 
 export function ItemList({ productos }) {
