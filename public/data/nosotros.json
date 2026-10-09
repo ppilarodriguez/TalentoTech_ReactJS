@@ -1,0 +1,6 @@
+ [
+    {"id": 1, "nombre":"Frankenstein", "email":"franki1818@gmail.com", "puesto":"Desarrollador web", "foto":"perfiles/perfil1.jpg"},
+    {"id": 2, "nombre":"Gerardo", "email":"gerardo@gmail.com", "puesto":"Encargado", "foto":"perfiles/perfil2.jpg"},
+    {"id": 3, "nombre":"Henry", "email":"spencer1977@gmail.com", "puesto":"Vendedor", "foto":"perfiles/perfil3.jpg"},
+    {"id": 4, "nombre":"Alien", "email":"alien1979@gmail.com", "puesto":"Community Manager", "foto":"perfiles/perfil4.jpg"}
+  ]
