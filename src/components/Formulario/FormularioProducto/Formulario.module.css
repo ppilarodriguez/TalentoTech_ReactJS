@@ -37,9 +37,41 @@ form input {
     margin-top: 3px;
 }
 
+.contenedorInput input {
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid #3f3f46;
+    background-color: #f1f1f1;
+    color: #000000; 
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 3px;
+}
+
+.inputImagen {
+    color: #000000 !important; 
+    cursor: pointer;
+}
+
+.inputImagen::file-selector-button {
+    background-color: #27272a;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.inputImagen::file-selector-button:hover {
+    background-color: #52525b;
+}
+
 form input:focus {
-    border-color: #551818;
-    box-shadow: 0 0 0 3px #9851516f;
+    border-color: #343434;
+    box-shadow: 0 0 0 3px #5249496f;
 }
 
 form button {
@@ -64,76 +96,3 @@ form button:hover {
 form button:active {
     transform: scale(0.9);
 }
-
-/*form {
-  background-color: #18181b; Negro suave / Slate oscuro 
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  max-width: 400px; /* Responsive: adaptable pero limitado en desktop 
-  margin: 2rem auto; /* Centrado automático horizontal 
-  padding: 2.5rem 2rem;
-  row-gap: 1.5rem;
-  color: #f4f4f5;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  font-family: system-ui, -apple-system, sans-serif;
-}
-
-form h2 {
-  align-self: center;
-  margin: 0;
-  font-size: 1.5rem;
-  letter-spacing: -0.5px;
-}
-
-.contenedorInput {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;  Espacio entre label e input 
-}
-
-.contenedorInput label {
-  font-size: 0.875rem;
-  color: #a1a1aa; /* Gris claro para las etiquetas 
-}
-
-form input {
-  padding: 10px 12px;
-  border-radius: 6px;
-  border: 1px solid #3f3f46;
-  background-color: #27272a;
-  color: #ffffff;
-  font-size: 0.95rem;
-  outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Corrección de `:active` por `:focus` y corrección de sintaxis border 
-form input:focus {
-  border-color: #ed1919;
-  box-shadow: 0 0 0 3px rgba(237, 25, 25, 0.25); /* Resplandor al enfocar 
-}
-
-form button {
-  background-color: #ffffff;
-  color: #000000;
-  border: none;
-  padding: 10px 16px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  white-space: nowrap;
-  width: 100%; /* Mejor usabilidad con ancho completo 
-  border-radius: 6px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-  margin-top: 0.5rem;
-}
-
-form button:hover {
-  background-color: #e4e4e7;
-}
-
-form button:active {
-  transform: scale(0.98); /* Transición de clic más rápida y natural 
-}*/
