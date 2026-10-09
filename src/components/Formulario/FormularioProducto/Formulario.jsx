@@ -4,7 +4,7 @@ export function Formulario({datosForm, manejarCambio, manejarEnvio, manejarCambi
     return (
         <form onSubmit={manejarEnvio}>
             <h2>Nuevo album</h2>
-            <div className={styles.contenedorInput}><label htmlFor='nombre'>Nombre:</label><input name="nombre" id='nombre' value={datosForm.nombre} onChange={manejarCambio} type="text"></input></div>
+            <div className={styles.contenedorInput}><label htmlFor='nombre'>Nombre del album:</label><input name="nombre" id='nombre' value={datosForm.nombre} onChange={manejarCambio} type="text"></input></div>
             <div className={styles.contenedorInput}><label htmlFor='artista'>Nombre del artista:</label><input name="artista" id='artista' value={datosForm.artista} onChange={manejarCambio} type="text"></input></div>
             <div className={styles.contenedorInput}><label htmlFor='anio'>Año de publicación:</label><input name="anio" id='anio' value={datosForm.anio} onChange={manejarCambio} type="number"></input></div>
             <div className={styles.contenedorInput}><label htmlFor='precio'>Precio:</label><input name="precio" id='precio' value={datosForm.precio} onChange={manejarCambio} type="text"></input></div>
