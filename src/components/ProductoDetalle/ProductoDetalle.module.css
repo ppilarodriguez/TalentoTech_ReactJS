@@ -1,0 +1,290 @@
+.contenedorPrincipal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    width: 90%;
+    max-width: 960px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    gap: 3.5rem;
+    border-radius: 8px;
+    border: 1px solid #1f1f1f;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.contenedorPlastico {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 340px;
+    height: 340px;
+    flex-shrink: 0;
+    background: #111111;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.05), 0 10px 30px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+}
+
+.costadito {
+    width: 14px;
+    height: 100%;
+    background: repeating-linear-gradient(0deg,
+            #1a1a1a,
+            #1a1a1a 2px,
+            #0d0d0d 2px,
+            #0d0d0d 4px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contenedorPortada {
+    position: relative;
+    width: calc(100% - 14px);
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.portadaImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.brilloAcrilico {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.18) 0%,
+            rgba(255, 255, 255, 0) 45%,
+            rgba(255, 255, 255, 0.05) 100%);
+    pointer-events: none;
+}
+
+.cdDisc {
+    position: absolute;
+    right: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,
+            #2b2b2b 0%,
+            #555555 25%,
+            #1f1f1f 50%,
+            #444444 75%,
+            #111111 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease;
+}
+
+.contenedorPlastico:hover .cdDisc {
+    transform: translateY(-50%) translateX(20px) rotate(45deg);
+}
+
+.cdHole {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #0a0a0a;
+    border: 8px solid rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.productoInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.4rem;
+}
+
+.formatoProducto {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    color: #777777;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.tituloAlbum {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin: 0;
+    line-height: 1;
+}
+
+.artistaYAnio {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    margin: 0 0 1.2rem 0;
+}
+
+.anio {
+    color: #666666;
+}
+
+.productoPrecio {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -0.02em;
+}
+
+.productoBotones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 520px;
+    align-self: center;
+}
+
+.botonIcono {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    opacity: 0;
+}
+
+.contenedorPortada:hover .botonIcono {
+    opacity: 1;
+}
+
+.botonIcono:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    transform: scale(1.08);
+}
+
+.botonIcono:hover .iconoEstrella {
+    stroke: #000000;
+}
+
+.botonIcono.activo {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    opacity: 1;
+}
+
+.botonIcono.activo .iconoEstrella {
+    fill: #000000;
+    stroke: #000000;
+}
+
+.iconoEstrella {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2px;
+    transition: transform 0.2s ease, fill 0.3s ease, stroke 0.3s ease;
+}
+
+.btnComprar {
+    width: 100%;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.4s ease-in-out;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btnComprar:hover {
+    background-color: #e0e0e0;
+}
+
+.btnComprar:active {
+    transform: scale(0.98);
+}
+
+.botonesSecundarios {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.btnIconoFila {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333333;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btnIconoFila:hover {
+    background-color: #262626;
+    border-color: #555555;
+    transform: scale(1.02);
+}
+
+.btnIconoFila:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    .contenedorPrincipal {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .contenedorPlastico {
+        width: 260px;
+        height: 260px;
+    }
+
+    .cdDisc {
+        width: 230px;
+        height: 230px;
+        right: -20px;
+    }
+
+    .productoInfo {
+        align-items: center;
+        text-align: center;
+    }
+
+    .productoBotones {
+        max-width: 100%;
+    }
+
+    .btnComprar {
+        width: 100%;
+    }
+}

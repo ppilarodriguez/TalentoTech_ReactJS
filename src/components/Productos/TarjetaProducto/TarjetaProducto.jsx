@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './TarjetaProducto.module.css';
+import { Link } from 'react-router-dom';
 
 export function TarjetaProducto(props) {
 
@@ -36,11 +37,14 @@ export function TarjetaProducto(props) {
     }
 
     return (
+        
         <div className={styles.contenedorProducto}>
             <div className={styles.contenedorImagen}>
                 
+                <Link to={`/productos/${props.id}`}>
                     <img src={props.imagen} alt={props.nombre} />
-                
+                </Link>
+
                 <div className={styles.artista}>
                     <h5>{props.artista}</h5>
                     <p>{props.anio} - Stock: {props.stock}</p>
@@ -67,7 +71,9 @@ export function TarjetaProducto(props) {
                 </button>
             </div>
             <div className={styles.contenedorInformacion}>
+                 <Link to={`/productos/${props.id}`} >
                 <h4>{props.nombre}</h4>
+                </Link>
                 <h4>${props.precio}</h4>
             </div>
         </div>
